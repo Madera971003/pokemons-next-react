@@ -1,0 +1,19 @@
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    .arrowButton {
+        font-size: 50px;
+    }
+}
+.selectsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+    h3 {
+        margin-right: 15px;
+    }
+    .formContainer {
+        margin-right: 40px;
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../theme/globals.scss';
+
+.footer {
+  background-color: $first-color;
+  min-height: 80px;
+  &__socialMedia {
+    display: flex;
+    justify-content: center;
+  }
+  svg {
+    color: gray;
+  }
+  &__rights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      color: white;
+      text-align: center;
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+  }
+}

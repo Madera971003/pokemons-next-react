@@ -30,7 +30,7 @@ $heightCard: 260px;
             }
             &_3 {
                 padding: 15px;
-                height: $heightCard;
+                min-height: $heightCard;
             }
         }
     }

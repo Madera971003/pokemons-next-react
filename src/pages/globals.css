@@ -12,44 +12,44 @@ html {
 /* Background colors */
 
 .rock {
-    background-color: rgba(148, 81, 81, 0.527);
+    background-color: rgba(148, 81, 81, 0.527) !important;
 }
 .ghost {
-    background-color: rgba(148, 139, 139, 0.884);
+    background-color: rgba(148, 139, 139, 0.884) !important;
 }
 .electric {
-    background-color: rgb(255, 255, 161);
+    background-color: rgb(255, 255, 161) !important;
 }
 .bug {
-    background-color: #f6d6a7;
+    background-color: #f6d6a7 !important;
 }
 .poison {
-    background-color: #e0a7f6;
+    background-color: #e0a7f6 !important;
 }
 .normal {
-    background-color: #f4f4f4;
+    background-color: #f4f4f4 !important;
 }
 .fairy {
-    background-color: rgba(255, 192, 203, 0.863);
+    background-color: rgba(255, 192, 203, 0.863) !important;
 }
 .fire {
-    background-color: #fbe3df;
+    background-color: #fbe3df !important;
 }
 .grass {
-    background-color: #e2f9e1;
+    background-color: #e2f9e1 !important;
 }
 .water {
-    background-color: #e0f1fd;
+    background-color: #e0f1fd !important;
 }
 .fighting {
-    background-color: #efed6c;
+    background-color: #efed6c !important;
 }
 .psychic {
-    background-color: rgb(248, 230, 251);
+    background-color: rgb(248, 230, 251) !important;
 }
 .ice {
-    background-color: rgba(82, 195, 240, 0.795);
+    background-color: rgba(82, 195, 240, 0.795) !important;
 }
 .steel {
-    background-color: rgba(90, 111, 119, 0.31);
+    background-color: rgba(90, 111, 119, 0.31) !important;
 }

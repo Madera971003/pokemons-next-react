@@ -1,3 +1,5 @@
+@import '../../theme/globals.scss';
+
 .buttonsContainer {
     display: flex;
     justify-content: center;
@@ -15,5 +17,11 @@
     }
     .formContainer {
         margin-right: 40px;
+    }
+    .input {
+        width: 150px;
+        @media #{$small-and-down} {
+            width: 90px;
+        }
     }
 }

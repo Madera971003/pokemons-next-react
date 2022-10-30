@@ -8,6 +8,8 @@ export type PokemonDataGenderSpecies = {
   url: string;
 };
 
+export type PokemonDataColorSpecies = PokemonDataGenderSpecies;
+
 type Abilities = {
   ability: {
     name: string;

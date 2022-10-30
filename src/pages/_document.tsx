@@ -8,6 +8,8 @@ class MyDocument extends Document {
         <Head>
           <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <link rel="shortcut icon" href="./pokebolaIcon.ico" />
+          <title>Pokémon</title>
         </Head>
         <body>
           <Main />

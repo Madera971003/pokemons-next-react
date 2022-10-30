@@ -19,12 +19,14 @@
     top: 0;
     h3 {
         margin-right: 15px;
+        font-weight: 800;
     }
     .formContainer {
         margin-right: 40px;
     }
     .input {
         width: 150px;
+        background-color: white;
         @media #{$small-and-down} {
             width: 90px;
         }

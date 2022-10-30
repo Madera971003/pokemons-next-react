@@ -8,3 +8,48 @@ html {
     scroll-behavior: smooth;
     background-color: #4fa095;
 }
+
+/* Background colors */
+
+.rock {
+    background-color: rgba(148, 81, 81, 0.527);
+}
+.ghost {
+    background-color: rgba(148, 139, 139, 0.884);
+}
+.electric {
+    background-color: rgb(255, 255, 161);
+}
+.bug {
+    background-color: #f6d6a7;
+}
+.poison {
+    background-color: #e0a7f6;
+}
+.normal {
+    background-color: #f4f4f4;
+}
+.fairy {
+    background-color: rgba(255, 192, 203, 0.863);
+}
+.fire {
+    background-color: #fbe3df;
+}
+.grass {
+    background-color: #e2f9e1;
+}
+.water {
+    background-color: #e0f1fd;
+}
+.fighting {
+    background-color: #efed6c;
+}
+.psychic {
+    background-color: rgb(248, 230, 251);
+}
+.ice {
+    background-color: rgba(82, 195, 240, 0.795);
+}
+.steel {
+    background-color: rgba(90, 111, 119, 0.31);
+}

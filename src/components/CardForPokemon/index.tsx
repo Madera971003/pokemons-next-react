@@ -85,7 +85,10 @@ export const CardForPokemon = ({
     <Card className={styles.cardContainer}>
       <Grid container spacing={2} className={styles.gridContainer}>
         <Grid item xs={12} sm={6} md={6} lg={2}>
-          <Card className={styles.cardDescription_1} elevation={8}>
+          <Card
+            className={cx(styles.cardDescription_1, pokemonData.type)}
+            elevation={8}
+          >
             {pokemonData?.img && (
               <Image src={pokemonData?.img} width={140} height={140} />
             )}
@@ -93,7 +96,10 @@ export const CardForPokemon = ({
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={2}>
-          <Card className={styles.cardDescription_2} elevation={8}>
+          <Card
+            className={cx(styles.cardDescription_2, pokemonData.type)}
+            elevation={8}
+          >
             <div className={styles.description}>
               {sortType === 'gender' ? <h3>Gender: {Gender}</h3> : null}
               {sortType === 'color' ? <h3>Color: {Color}</h3> : null}
@@ -105,7 +111,10 @@ export const CardForPokemon = ({
           </Card>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={8}>
-          <Card className={styles.cardDescription_3} elevation={8}>
+          <Card
+            className={cx(styles.cardDescription_3, pokemonData.type)}
+            elevation={8}
+          >
             <h2>Abilities</h2>
             <Box sx={{ width: '100%' }}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

@@ -84,7 +84,7 @@ export const CardForPokemon = ({
   return (
     <Card className={styles.cardContainer}>
       <Grid container spacing={2} className={styles.gridContainer}>
-        <Grid item xs={12} sm={6} md={6} lg={2}>
+        <Grid item xs={12} sm={6} md={6} lg={2} sx={{ display: 'inline-grid' }}>
           <Card
             className={cx(styles.cardDescription_1, pokemonData.type)}
             elevation={8}
@@ -95,7 +95,7 @@ export const CardForPokemon = ({
             <h3>{pokemonData.name}</h3>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={2}>
+        <Grid item xs={12} sm={6} md={6} lg={2} sx={{ display: 'inline-grid' }}>
           <Card
             className={cx(styles.cardDescription_2, pokemonData.type)}
             elevation={8}

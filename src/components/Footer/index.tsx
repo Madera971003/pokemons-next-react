@@ -1,7 +1,6 @@
 // Dependencies
 import { Grid } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Link from 'next/link';
 
 // Styles
 import styles from './styles.module.scss';

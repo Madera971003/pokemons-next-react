@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Grid, Card, Box, Tab, Tabs } from '@mui/material';
 import Image from 'next/image';
 import axios from 'axios';
+import cx from 'classnames';
 import { TabPanel } from './TabPanel';
 // Types
 import { PokemonData, PokemonInfoData } from '../../types/types';
@@ -11,8 +12,14 @@ import styles from './styles.module.scss';
 
 export const CardForPokemon = ({
   pokemon,
+  sortType,
+  gender,
+  color,
 }: {
   pokemon: PokemonData;
+  sortType: string;
+  gender: string;
+  color: string;
 }): JSX.Element => {
   const [pokemonData, setPokemonData] = useState<PokemonInfoData>({
     abilities: [],
@@ -25,6 +32,13 @@ export const CardForPokemon = ({
   });
   const [pokemonAbilitiesData, setPokemonsAbilitiesData] = useState<any>();
   const [valueTab, setValueTab] = React.useState<number>(0);
+
+  function capitalizeFirstLetter(value: string): string {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+
+  const Gender = capitalizeFirstLetter(gender);
+  const Color = capitalizeFirstLetter(color);
 
   const callApiData = (): void => {
     axios.get(pokemon?.url).then((res) => {
@@ -53,6 +67,7 @@ export const CardForPokemon = ({
       });
     });
   };
+
   const handleChange = (event: any, newValue: number): void => {
     setValueTab(newValue);
   };
@@ -70,7 +85,7 @@ export const CardForPokemon = ({
     <Card className={styles.cardContainer}>
       <Grid container spacing={2} className={styles.gridContainer}>
         <Grid item xs={12} sm={6} md={6} lg={2}>
-          <Card className={`${styles.cardDescription_1}`}>
+          <Card className={styles.cardDescription_1} elevation={8}>
             {pokemonData?.img && (
               <Image src={pokemonData?.img} width={140} height={140} />
             )}
@@ -78,15 +93,19 @@ export const CardForPokemon = ({
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={2}>
-          <Card className={styles.cardDescription_2}>
-            <h3>Id: {pokemonData.id}</h3>
-            <h3>Type: {pokemonData.type}</h3>
-            <h3>Weight: {pokemonData.weight} lb</h3>
-            <h3>Base Experience: {pokemonData.base_experience}</h3>
+          <Card className={styles.cardDescription_2} elevation={8}>
+            <div className={styles.description}>
+              {sortType === 'gender' ? <h3>Gender: {Gender}</h3> : null}
+              {sortType === 'color' ? <h3>Color: {Color}</h3> : null}
+              <h3>Id: {pokemonData.id}</h3>
+              <h3>Type: {capitalizeFirstLetter(pokemonData.type)}</h3>
+              <h3>Weight: {pokemonData.weight} lb</h3>
+              <h3>Base Experience: {pokemonData.base_experience}</h3>
+            </div>
           </Card>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={8}>
-          <Card className={styles.cardDescription_3}>
+          <Card className={styles.cardDescription_3} elevation={8}>
             <h2>Abilities</h2>
             <Box sx={{ width: '100%' }}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

@@ -10,7 +10,7 @@ export const Footer = (): JSX.Element => (
       <Grid item xs={12} sm={10} md={6} className={styles.footer__rights}>
         <div>
           <p>
-            Todos los <strong>izquierdos</strong> Resevados 2022 &#174;
+            All <strong>Lefts</strong> reserved 2022 &#174;
           </p>
         </div>
       </Grid>

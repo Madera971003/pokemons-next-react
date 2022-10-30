@@ -324,7 +324,12 @@ export function App(): JSX.Element {
         <>
           {pokemonsData?.map((pokemon) => (
             <div key={pokemon.name}>
-              <CardForPokemon pokemon={pokemon} />
+              <CardForPokemon
+                pokemon={pokemon}
+                sortType={sortType}
+                gender={gender}
+                color={color}
+              />
             </div>
           ))}
         </>

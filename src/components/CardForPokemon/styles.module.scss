@@ -1,8 +1,9 @@
+@import '../../theme/globals.scss';
 $heightCard: 260px;
 
 .cardContainer {
     margin: 20px;
-    background-color: #d8d199;
+    background-color: $fourth-color;
     .gridContainer {
         padding: 10px;
         .cardDescription {
@@ -18,10 +19,18 @@ $heightCard: 260px;
             &_2 {
                 padding: 20px;
                 min-height: $heightCard;
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    align-content: space-around;
+                    h3 {
+                        margin-top: 10px;
+                    }
+                }
             }
             &_3 {
                 padding: 15px;
-                min-height: $heightCard;
+                height: $heightCard;
             }
         }
     }

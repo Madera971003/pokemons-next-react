@@ -11,7 +11,7 @@ export const Header = (): JSX.Element => {
     router.reload();
   };
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <Image
         className={styles.header__logo}
         src="/pokemon.png"
@@ -20,6 +20,6 @@ export const Header = (): JSX.Element => {
         height={100}
         onClick={handleClick}
       />
-    </div>
+    </header>
   );
 };

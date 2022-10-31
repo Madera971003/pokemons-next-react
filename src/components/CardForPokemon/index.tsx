@@ -30,7 +30,9 @@ export const CardForPokemon = ({
     weight: '',
     base_experience: '',
   });
-  const [pokemonAbilitiesData, setPokemonsAbilitiesData] = useState<any>();
+  const [pokemonAbilitiesData, setPokemonsAbilitiesData] = useState<string[]>(
+    []
+  );
   const [valueTab, setValueTab] = React.useState<number>(0);
 
   function capitalizeFirstLetter(value: string): string {
@@ -63,11 +65,12 @@ export const CardForPokemon = ({
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (item: any) => item?.language?.name === 'en'
         );
-        setPokemonsAbilitiesData((prev: any) => [...prev, effect?.effect]);
+        setPokemonsAbilitiesData((prev: string[]) => [...prev, effect?.effect]);
       });
     });
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChange = (event: any, newValue: number): void => {
     setValueTab(newValue);
   };
@@ -86,7 +89,7 @@ export const CardForPokemon = ({
       <Grid container spacing={2} className={styles.gridContainer}>
         <Grid item xs={12} sm={6} md={6} lg={2} sx={{ display: 'inline-grid' }}>
           <Card
-            className={cx(styles.cardDescription_1, pokemonData.type)}
+            className={cx(styles.cardDescription_1, styles[pokemonData.type])}
             elevation={8}
           >
             {pokemonData?.img && (
@@ -97,7 +100,7 @@ export const CardForPokemon = ({
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={2} sx={{ display: 'inline-grid' }}>
           <Card
-            className={cx(styles.cardDescription_2, pokemonData.type)}
+            className={cx(styles.cardDescription_2, styles[pokemonData.type])}
             elevation={8}
           >
             <div className={styles.description}>
@@ -112,7 +115,7 @@ export const CardForPokemon = ({
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={8}>
           <Card
-            className={cx(styles.cardDescription_3, pokemonData.type)}
+            className={cx(styles.cardDescription_3, styles[pokemonData.type])}
             elevation={8}
           >
             <h2>Abilities</h2>
